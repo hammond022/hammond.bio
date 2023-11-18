@@ -20,12 +20,13 @@
   border-color: var(--dl-color-danger-300);
   border-style: dashed;
   border-width: 0px;
-  background-image: linear-gradient(180deg, rgb(132, 28, 128) 0.00%,rgba(31, 39, 48, 0.9) 100.00%);
+  background-image: linear-gradient(180deg, rgb(132, 28, 128) 0.00%,rgba(31, 39, 48, 0.9) 100.00%),url("public/0061jfguadalupe_makati_mandaluyong_bridge_mrt-21_station_bridge_quezon_avenue_edsafvf-1500w.jpg");
+  background-position: top left,left;
 }
 .home-container2 {
   flex: 1;
   width: 100%;
-  height: 100%;
+  height: 440px;
   display: flex;
   position: relative;
   align-self: flex-start;
@@ -40,9 +41,11 @@
 }
 .home-image {
   flex: 0;
-  width: var(--dl-size-size-xlarge);
+  width: 100%;
+  height: 100%;
   align-self: center;
   object-fit: cover;
+  padding-left: 10%;
 }
 .home-text {
   color: rgb(255, 255, 255);
@@ -55,7 +58,7 @@
   transition: 0.3s;
   font-weight: 800;
   padding-top: 0px;
-  padding-left: var(--dl-space-space-sixunits);
+  padding-left: 20%;
   padding-right: 0px;
   padding-bottom: 0px;
 }
@@ -186,12 +189,38 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-@media(max-width: 479px) {
+@media(max-width: 1200px) {
+  .home-text {
+    padding-left: 10%;
+  }
+}
+@media(max-width: 991px) {
   .home-image {
+    padding-left: 0%;
+  }
+  .home-text {
+    padding-left: 5%;
+  }
+}
+@media(max-width: 767px) {
+  .home-image {
+    width: 0%;
+  }
+}
+@media(max-width: 479px) {
+  .home-container2 {
+    height: 77px;
+  }
+  .home-image {
+    flex: 0;
     width: var(--dl-size-size-medium);
+    height: 100%;
+    z-index: 100;
+    align-self: flex-start;
+    padding-left: 10%;
   }
   .home-text {
     font-size: 300%;
-    padding-left: var(--dl-space-space-halfunit);
+    padding-left: 5%;
   }
 }
