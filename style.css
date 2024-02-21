@@ -81,10 +81,14 @@ section {
 .title {
   font-size: 4rem;
   text-align: center;
+  background-color: whitesmoke;
 }
 .section__profile_p2 {
   font-size: 1.75rem;
-  text-align: center;
+  text-align: right;
+}
+#profile_olfu {
+  color: #128c44;
 }
 
 .button_wall {
@@ -100,6 +104,39 @@ section {
 }
 .button_wall_image {
   display: flex;
+  height: 50px;
+  width: 50px;
+}
+
+#wall {
+  gap: 5rem;
+}
+.wall_container {
+  border-radius: 2rem;
+  height: 80vh;
+  width: 100%;
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wall_entry {
+  padding: 10px;
+  margin: 20px 10px;
+  border-radius: 2rem;
+  border: grey 0.1rem solid;
+  height: 200px;
+  width: 450px;
+  display: flex;
+  flex-direction: row;
+}
+.wall_text {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.wall_pfp {
+  padding: 0.2rem;
   height: 50px;
   width: 50px;
 }
