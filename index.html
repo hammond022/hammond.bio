@@ -1,88 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hammond.bio</title>
-    <meta property="og:title" content="Those Joyful Antelope" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
-
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
-
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
-
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
+    <title>Hammond.bio</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./index.css" rel="stylesheet" />
-
-      <div class="home-container">
-        <div class="home-container1">
-          <div class="home-container2">
-            <img
-              alt="image"
-              src="public/dall%C3%A2%C2%B7e%202023-11-17%2003.29.43%20-%20anime%20character%20based%20on%20a%20description%20a%20young%20asian%20female%20with%20short%20hair%20styled%20with%20a%20side%20part.%20she%20is%20wearing%20a%20solid%20white%20blouse%20with%20a%20dark%20-photoroom.png-photoroom-1500w.png"
-              loading="eager"
-              class="home-image"
-            />
-            <h1 class="home-text">HAMMOND</h1>
-          </div>
-        </div>
-        <div class="home-gallery">
-          <a
-            href="https://open.spotify.com/user/ugo1yg6wgokvyiobgm7hvzrb2?si=452050a7de1042a4"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="home-link"
-          >
-            <div class="home-main-element">
-              <img
-                alt="image"
-                src="public/external/pastedimage-tsj7-300h.png"
-                loading="lazy"
-                class="home-image1"
-              />
-              <div class="home-container3">
-                <span class="home-text1">
-                  <span class="home-text2">Spotify</span>
-                  <br />
-                </span>
-              </div>
-            </div>
-          </a>
-          <div class="home-main-element1"></div>
-          <div class="home-main-element2"></div>
-          <div class="home-main-element3"></div>
-        </div>
+    <nav id="desktop-nav">
+      <div class="logo">HAMMOND.BIO</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <hr />
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section_pic">
+        <img src="./images/cry1.png" alt="profile picture" />
+      </div>
+      <div class="section__profile_text">
+        <p class="section__profile_p1">Hello! im,</p>
+        <h1 class="title">Hammond</h1>
+        <p class="section__profile_p2">
+          <a id="profile_olfu" href="https://www.fatima.edu.ph/">OLFU</a>
+          Undergrad
+        </p>
+      </div>
+    </section>
+    <div class="button_wall">
+      <div id="public_wall" class="button_wall_text">
+        <a href="#public_wall">Public Wall</a>
+      </div>
+      <div class="button_wall_image">
+        <img src="./images/arrow.png" alt="down arrow" />
       </div>
     </div>
+    <section id="wall">
+      <div class="wall_container">
+        <div class="wall_entry">
+          <img class="wall_pfp" src="./images/user.png" alt="user pfp" />
+          <div class="wall_text">
+            <h3>Username</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+              libero voluptas neque et corrupti itaque sapiente ipsum nostrum
+              ducimus. Repellat fugiat ad id nostrum. Facilis consequatur
+              voluptate exercitationem odit amet!
+            </p>
+          </div>
+        </div>
+        <div class="wall_entry">
+          <img class="wall_pfp" src="./images/user.png" alt="user pfp" />
+          <div class="wall_text">
+            <h3>Username</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+              libero voluptas neque et corrupti itaque sapiente ipsum nostrum
+              ducimus. Repellat fugiat ad id nostrum. Facilis consequatur
+              voluptate exercitationem odit amet!
+            </p>
+          </div>
+        </div>
+        <div class="wall_entry">
+          <img class="wall_pfp" src="./images/user.png" alt="user pfp" />
+          <div class="wall_text">
+            <h3>Username</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+              libero voluptas neque et corrupti itaque sapiente ipsum nostrum
+              ducimus. Repellat fugiat ad id nostrum. Facilis consequatur
+              voluptate exercitationem odit amet!
+            </p>
+          </div>
+        </div>
+        <div class="wall_entry">
+          <img class="wall_pfp" src="./images/user.png" alt="user pfp" />
+          <div class="wall_text">
+            <h3>Username</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+              libero voluptas neque et corrupti itaque sapiente ipsum nostrum
+              ducimus. Repellat fugiat ad id nostrum. Facilis consequatur
+              voluptate exercitationem odit amet!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
