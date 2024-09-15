@@ -42,9 +42,9 @@ a {
   text-decoration-color: white;
 }
 
-a:hover {
+/* a:hover {
   color: grey;
-}
+} */
 
 .logo {
   font-size: 3rem;
@@ -67,9 +67,17 @@ section {
 }
 .section_pic {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 250px;
+  width: 250px;
   margin: auto 0;
+  border-radius: 0.5em;
+  background-image: url(./images/profile.jpg);
+  background-size: cover;
+}
+
+.pfp {
+  border: 0.2em solid rgb(221, 221, 221);
+  border-radius: 0.5em;
 }
 .section__profile_text {
   align-self: center;
@@ -96,6 +104,10 @@ section {
   align-items: center;
   flex-direction: column;
 }
+
+.button_wall:hover {
+  opacity: 60%;
+}
 .button_wall_text {
   font-size: 2rem;
   text-decoration: underline;
@@ -121,15 +133,20 @@ section {
 }
 
 .wall_entry {
-  padding: 10px;
+  padding: 30px 20px;
   margin: 20px 10px;
   border-radius: 2rem;
   border: grey 0.1rem solid;
   height: 200px;
-  width: 450px;
+  width: 400px;
   display: flex;
   flex-direction: row;
 }
+
+.pulse:hover {
+  animation: pulse 1s forwards;
+}
+
 .wall_text {
   padding-left: 10px;
   display: flex;
@@ -139,4 +156,39 @@ section {
   padding: 0.2rem;
   height: 50px;
   width: 50px;
+}
+
+.half {
+  opacity: 30%;
+  animation: none;
+}
+
+.zeroOpacity {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.emtpy {
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.9);
+  }
+
+  40% {
+    transform: scale(0.99);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 }
