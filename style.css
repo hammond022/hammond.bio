@@ -110,9 +110,7 @@ section {
 }
 .button_wall_text {
   font-size: 2rem;
-  text-decoration: underline;
-  text-underline-offset: 0.2rem;
-  text-decoration-color: grey;
+  margin-bottom: 0.3em;
 }
 .button_wall_image {
   display: flex;
