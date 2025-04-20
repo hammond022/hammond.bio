@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Student Record System",
+    "description": "A student record system written in C manages and organizes student information, including registration, enrollment, and payment through a structured interface and file-based storage.",
+    "image": "./images/1.png",
+    "link": "https://github.com/hammond022/student_record_system"
+  },
+  {
+    "title": "yt-dlp-clipper",
+    "description": "A command-line tool to download YouTube videos, trim clips, and automatically generate and burn animated subtitles using Whisper AI. Supports custom time ranges, video quality selection, and multiple subtitle languages. ",
+    "image": "./images/2.png",
+    "link": "https://github.com/hammond022/yt-dlp-clipper"
+  },
+  {
+    "title": "AVAACS ",
+    "description": "AVAACS (Advanced Voice Activated Assistant & Command System) is a desktop application that combines voice recognition with Telegram bot integration for automated command and notification capabilities.",
+    "image": "./images/2.png",
+    "link": "https://github.com/hammond022/pyvoice"
+  },
+  {
+    "title": "hammond.bio",
+    "description": "This is my personal portfolio website, hammond.bio, built to showcase my projects and journey as an Information Technology student.",
+    "image": "./images/3.png",
+    "link": "https://github.com/hammond022/hammond.bio"
+  }
+]
