@@ -190,3 +190,36 @@ section {
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: whitesmoke;
+}
+/* footer not fixed to bottom of page when changing screen sizes */
+
+.footer-content {
+  font-size: 1rem;
+}
+
+.footer-separator {
+  margin: 0 1rem;
+  color: rgb(85, 85, 85);
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
