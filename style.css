@@ -190,3 +190,287 @@ section {
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }
+
+.item_container {
+  border: grey 0.1rem solid;
+  display: flex;
+  flex-direction: column; /* stack .item_main and .expand-content vertically */
+  align-items: stretch; /* stretch children to full width */
+  justify-content: flex-start;
+  align-items: left;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: #f8f8f8;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  gap: 2rem; /* add spacing between image and content */
+  position: relative; /* Add this to allow absolute positioning of the button */
+  width: 100%;
+  /* max-width: 700px;  */
+  box-sizing: border-box;
+  min-height: 200px; /* Set minimum height */
+  max-height: fit-content;
+}
+
+.item_main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  min-height: 180px; /* Fixed height for main content */
+}
+
+.expand-content {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+  max-height: 0; /* Collapsed by default */
+}
+
+.expand-content.expanded {
+  /* max-height will be set inline by JS for smooth animation */
+}
+
+.item_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem; /* reduced from 0.5rem */
+  width: 100%;
+  max-width: calc(100% - 200px); /* Account for image width + gaps */
+}
+
+.item_content h3 {
+  font-size: 1.2rem;
+  margin: 0.3em 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item_content p {
+  max-height: 4.5em; /* Approximately 3 lines of text */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.item_image {
+  border-radius: 1rem;
+  background-image: url(images/cry1.png);
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  margin: 1em;
+  min-width: 150px; /* Fixed width */
+  min-height: 150px; /* Fixed height */
+  max-width: 150px; /* Fixed maximum width */
+  max-height: 150px; /* Fixed maximum height */
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.item_icon {
+  background-image: url(images/1.png);
+  height: 16px;
+  width: 16px;
+  background-size: contain; /* changed from cover to contain */
+  background-repeat: no-repeat; /* prevent tiling */
+  background-position: center; /* center the icon */
+  margin: 0em;
+  padding: 0em;
+  min-width: 16px; /* Fixed width */
+  min-height: 16px; /* Fixed height */
+  max-width: 16px; /* Fixed maximum width */
+  max-height: 16px; /* Fixed maximum height */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.item_icon_container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 20px; /* Fixed height for icon container */
+}
+
+.hang-btn {
+  /* Style previously for "Expand View" (now for "View Project") */
+  background: #ededed;
+  border: 1px solid #cccccc;
+  color: #888;
+  box-shadow: none;
+  font-weight: 500;
+  opacity: 0.85;
+  padding: 0.75em 1.5em;
+  border-radius: 2em;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 2;
+  margin-right: 0.5em;
+  margin-bottom: 0;
+}
+
+.hang-btn:hover {
+  background: #f5f5f5;
+  color: #666;
+  opacity: 1;
+  animation: none;
+}
+
+.item_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin-top: 1em;
+  align-items: center;
+  min-height: 40px; /* Fixed height for buttons container */
+}
+
+/* Style for the first button ("Expand View") - previously for last-child */
+.item_buttons .hang-btn:first-child {
+  background: #f8f8f8;
+  border: grey 0.1rem solid;
+  color: rgb(85, 85, 85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  opacity: 1;
+}
+.item_buttons .hang-btn:first-child:hover {
+  background: #f8f8f8;
+  animation: pulse 1s forwards;
+  color: rgb(85, 85, 85);
+  opacity: 1;
+}
+
+/* Style for the last button ("View Project") - previously for first-child (base .hang-btn) */
+.item_buttons .hang-btn:last-child {
+  background: #ededed;
+  border: 1px solid #cccccc;
+  color: #888;
+  box-shadow: none;
+  font-weight: 500;
+  opacity: 0.85;
+}
+.item_buttons .hang-btn:last-child:hover {
+  background: #f5f5f5;
+  color: #666;
+  opacity: 1;
+  animation: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.github-issues-mock {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: 1em;
+  background: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 1em;
+  font-size: 1rem;
+  /* Remove horizontal margins to prevent overflow */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.issues-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.issues-title {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.issues-count {
+  color: #586069;
+  font-size: 0.95em;
+}
+
+.issues-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.issue-row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.4em 0;
+  border-bottom: 1px solid #f6f8fa;
+}
+
+.issue-row:last-child {
+  border-bottom: none;
+}
+
+.issue-title {
+  flex: 2;
+  font-weight: 500;
+}
+
+.issue-label {
+  padding: 0.2em 0.7em;
+  border-radius: 1em;
+  font-size: 0.85em;
+  color: #fff;
+  margin-right: 0.5em;
+}
+
+.issue-label-bug {
+  background: #d73a49;
+}
+
+.issue-label-enhancement {
+  background: #28a745;
+}
+
+.issue-label-docs {
+  background: #0366d6;
+}
+
+.issue-status {
+  font-size: 0.85em;
+  font-weight: 600;
+  padding: 0.1em 0.6em;
+  border-radius: 1em;
+}
+
+.issue-status.open {
+  background: #28a74522;
+  color: #22863a;
+  border: 1px solid #28a74544;
+}
+
+.issue-status.closed {
+  background: #d73a4922;
+  color: #d73a49;
+  border: 1px solid #d73a4944;
+}
+
+.issue-updated {
+  color: #586069;
+  font-size: 0.85em;
+  margin-left: auto;
+}
